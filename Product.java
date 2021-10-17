@@ -34,4 +34,9 @@ class Product {
     public double getMRP() {
         return MRP;
     }
+    
+    @Override
+	public String toString() {
+		return "Product [productName=" + productName + ", productId=" + productId + ", MRP=" + MRP + "]";
+	}
 }
