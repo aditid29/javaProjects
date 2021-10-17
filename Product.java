@@ -2,13 +2,13 @@ package com.company;
 
 class Product {
     private String productName;
-    private int productId;
-    private double MRP;
+    private String prodQty;
+    private double prodMrp;
 
-    Product(String productName, int productId, double MRP) {
+    Product(String productName,String prodQty,double prodMrp){
         this.productName = productName;
-        this.productId = productId;
-        this.MRP = MRP;
+        this.prodQty=prodQty;
+        this.prodMrp =prodMrp;
     }
 
     public void setProductName(String productName) {
@@ -19,19 +19,21 @@ class Product {
         return productName;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
-
-    public int getProductId() {
-        return productId;
-    }
-
-    public void setMRP(double MRP) {
-        this.MRP = MRP;
+    public void setMRP(double prodMrp) {
+        this.prodMrp = prodMrp;
     }
 
     public double getMRP() {
-        return MRP;
+        return prodMrp;
     }
+
+
+    public void setProdQty(String prodQty) {
+        this.prodQty = prodQty;
+    }
+    public String getProdQty() {
+        return prodQty;
+    }
+
+
 }
