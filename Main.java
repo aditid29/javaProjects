@@ -7,6 +7,7 @@ public class Main{
     Order order;
     Product product;
     double q;
+    String item;
 
     public static void main(String[] args){
         System.out.println("Welcome To Daily Fresh");
@@ -46,13 +47,14 @@ public class Main{
         double q = sc.nextDouble();
 
 
+
         if (q > 5){
             System.out.println("Maximum 5 items allowed per order");
         }
         else {
         switch (item) {
             case "Milk":
-
+                item.getTotalCost();
 
 
 
@@ -75,10 +77,10 @@ public class Main{
 
     }
 
-
-    public int getTotalCost(double q,Product product) {
+    public double getTotalCost(double q, double prodMrp) {
         return q*prodMrp;
     }
+
 
     /*public void setTotalCost(int totalCost) {
         this.totalCost = totalCost;
