@@ -1,13 +1,13 @@
 package com.company;
-
+import java.io.*;
 public class Order {
 
 
-    private int orderNo;
-    private double orderQty;
-    private double orderPrice;
+    protected  int orderNo;
+    protected  double orderQty;
+    protected  double orderPrice;
     Product product;
-    double q;
+    protected double q;
 
     public double getOrderQty(double q) {
         return orderQty;
@@ -19,18 +19,16 @@ public class Order {
 
 
     public double getOrderPrice() {
-        return product.getProdMrp()*orderQty;
+        return product.getProdMrp() * orderQty;
     }
 
-    public void setOrderPrice(double orderPrice)
-    {
-        this.orderPrice = orderPrice ;
+    public void setOrderPrice(double orderPrice) {
+        this.orderPrice = orderPrice;
     }
 
 
-    public double getTotalCost() {
-        double prodMrp;
-        double v = q * prodMrp;
-
+    public double getTotalCost(Product pm, double q)throws IOException {
+        double v = q * pm.getProdMrp();
+return v;
     }
-
+}
